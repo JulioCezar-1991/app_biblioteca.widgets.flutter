@@ -38,14 +38,15 @@ class _LimitedBoxExampleState extends State<LimitedBoxExample> {
                     ),
                   ),
                   LimitedBox(
-                      maxHeight: mediaQuery.height / 5,
+                    maxHeight: mediaQuery.height / 5,
+                    child: Container(
+                      alignment: Alignment.centerRight,
                       child: Container(
-                        alignment: Alignment.centerRight,
-                        child: Container(
-                          /* width: mediaQuery.width / 30, */
-                          color: Colors.pink,
-                        ),
-                      )),
+                        /* width: mediaQuery.width / 30, */
+                        color: Colors.pink,
+                      ),
+                    ),
+                  ),
                   LimitedBox(
                     maxHeight: mediaQuery.height / 5,
                     child: Container(

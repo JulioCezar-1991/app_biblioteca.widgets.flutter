@@ -32,6 +32,8 @@ dependencies:
 
   flare_flutter: any
 
+  provider: any
+
   syncfusion_flutter_charts: any
 
   audioplayers: any

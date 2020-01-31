@@ -1,5 +1,8 @@
+import 'package:app_flutter_biblioteca/app/themes/theme_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:mobx/mobx.dart';
 
 class HomePage extends StatefulWidget {
   final String title;
@@ -12,6 +15,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    final controller = ThemeController();
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -22,8 +26,8 @@ class _HomePageState extends State<HomePage> {
               child: Image.asset('assets/icons/Clone-Old-icon.png'),
             ),
             onTap: () {
-              /*      bloc.save("light");
-              bloc.change('light'); */
+              /* controller.save("light"); */
+              controller.change('light');
             },
           ),
           GestureDetector(
@@ -33,8 +37,8 @@ class _HomePageState extends State<HomePage> {
               child: Image.asset('assets/icons/Darth-Vader-icon.png'),
             ),
             onTap: () {
-              /*  bloc.save("dark");
-              bloc.change('dark'); */
+              /* controller.save("dark"); */
+              controller.change('dark');
             },
           ),
         ],
@@ -118,15 +122,6 @@ class _HomePageState extends State<HomePage> {
             RaisedButton(
               child: Container(
                 alignment: Alignment.center,
-                child: Text('Validator'),
-              ),
-              onPressed: () {
-                Modular.to.pushNamed('/home/validator');
-              },
-            ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
                 child: Text("DateTime"),
               ),
               onPressed: () {
@@ -176,6 +171,15 @@ class _HomePageState extends State<HomePage> {
               ),
               onPressed: () {
                 Modular.to.pushNamed('/home/navigation');
+              },
+            ),
+            RaisedButton(
+              child: Container(
+                alignment: Alignment.center,
+                child: Text('Validator'),
+              ),
+              onPressed: () {
+                Modular.to.pushNamed('/home/validator');
               },
             ),
             RaisedButton(
