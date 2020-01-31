@@ -13,7 +13,7 @@ class SplashPage extends StatefulWidget {
 
 class _SplashPageState extends State<SplashPage> {
   startTime() async {
-    Future.delayed(Duration(seconds: 2)).then((v) {
+    Future.delayed(Duration(seconds: 3)).then((v) {
       Modular.to.pushReplacementNamed('/home');
     });
   }

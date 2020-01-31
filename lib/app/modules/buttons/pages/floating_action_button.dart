@@ -6,19 +6,14 @@ class FloatingActionButtonPage extends StatefulWidget {
       _FloatingActionButtonPageState();
 }
 
-class _FloatingActionButtonPageState
-    extends State<FloatingActionButtonPage> {
+class _FloatingActionButtonPageState extends State<FloatingActionButtonPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("FloatingActionButton"),
       ),
-      body: Container(
-        child: Column(
-          children: <Widget>[Text("Conteudo")],
-        ),
-      ),
+      body: Container(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton.extended(
         /* shape: BeveledRectangleBorder(

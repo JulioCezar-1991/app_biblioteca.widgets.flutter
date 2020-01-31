@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 class ButtonPage extends StatefulWidget {
   final String title;
-  const ButtonPage({Key key, this.title = "Button"}) : super(key: key);
+  const ButtonPage({Key key, this.title = "Buttons"}) : super(key: key);
 
   @override
   _ButtonPageState createState() => _ButtonPageState();
@@ -25,7 +26,7 @@ class _ButtonPageState extends State<ButtonPage> {
                 child: Text("FloatingActionButton"),
               ),
               onPressed: () {
-                Navigator.pushNamed(context, '/floatingbutton');
+                Modular.to.pushNamed('/home/buttons/floatingbutton');
               },
             ),
           ],

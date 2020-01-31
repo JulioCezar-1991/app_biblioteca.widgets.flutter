@@ -55,10 +55,10 @@ class _HomePageState extends State<HomePage> {
             RaisedButton(
               child: Container(
                 alignment: Alignment.center,
-                child: Text('Showdialog'),
+                child: Text('AlertDisplay'),
               ),
               onPressed: () {
-                Modular.to.pushNamed('/home/showdialog');
+                Modular.to.pushNamed('/home/alertdisplay');
               },
             ),
             RaisedButton(
@@ -82,7 +82,7 @@ class _HomePageState extends State<HomePage> {
             RaisedButton(
               child: Container(
                 alignment: Alignment.center,
-                child: Text("Button"),
+                child: Text("Buttons"),
               ),
               onPressed: () {
                 Modular.to.pushNamed('/home/buttons');
@@ -91,21 +91,19 @@ class _HomePageState extends State<HomePage> {
             RaisedButton(
               child: Container(
                 alignment: Alignment.center,
-                child: Text("Card"),
+                child: Text("Cards"),
               ),
               onPressed: () {
                 Modular.to.pushNamed('/home/card');
               },
             ),
-            /*
             RaisedButton(
               child: Container(
                 alignment: Alignment.center,
                 child: Text("CameraGallery"),
               ),
               onPressed: () {
-                Navigator.pushNamed(
-                    context, RouteGenerator.ROUTE_CAMERAGALLERY);
+                Modular.to.pushNamed('/home/cameragallery');
               },
             ),
             RaisedButton(
@@ -114,16 +112,16 @@ class _HomePageState extends State<HomePage> {
                 child: Text("Charts"),
               ),
               onPressed: () {
-                Navigator.pushNamed(context, RouteGenerator.ROUTE_HOMECHARTS);
+                Modular.to.pushNamed('/home/charts');
               },
             ),
             RaisedButton(
               child: Container(
                 alignment: Alignment.center,
-                child: Text("CPF - CNPJ"),
+                child: Text('Validator'),
               ),
               onPressed: () {
-                Navigator.pushNamed(context, RouteGenerator.ROUTE_VALIDCPFCNPJ);
+                Modular.to.pushNamed('/home/validator');
               },
             ),
             RaisedButton(
@@ -132,28 +130,28 @@ class _HomePageState extends State<HomePage> {
                 child: Text("DateTime"),
               ),
               onPressed: () {
-                Navigator.pushNamed(context, RouteGenerator.ROUTE_HOMEDATETIME);
+                Modular.to.pushNamed('/home/datetime');
               },
             ),
             RaisedButton(
               child: Container(
                 alignment: Alignment.center,
-                child: Text("Decoration"),
+                child: Text("Decorations"),
               ),
               onPressed: () {
-                Navigator.pushNamed(
-                    context, RouteGenerator.ROUTE_HOMEDECORATION);
+                Modular.to.pushNamed('/home/decorations');
               },
             ),
             RaisedButton(
               child: Container(
                 alignment: Alignment.center,
-                child: Text("Design"),
+                child: Text("BoxController"),
               ),
               onPressed: () {
-                Navigator.pushNamed(context, RouteGenerator.ROUTE_HOMEDESIGN);
+                Modular.to.pushNamed('/home/boxcontroller');
               },
             ),
+            /*
             RaisedButton(
               child: Container(
                 alignment: Alignment.center,
