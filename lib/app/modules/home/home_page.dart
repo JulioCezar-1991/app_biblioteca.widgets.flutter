@@ -151,33 +151,13 @@ class _HomePageState extends State<HomePage> {
                 Modular.to.pushNamed('/home/boxcontroller');
               },
             ),
-            /*
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Dio"),
-              ),
-              onPressed: () {
-                Navigator.pushNamed(context, RouteGenerator.ROUTE_HOMEDIO);
-              },
-            ),
             RaisedButton(
               child: Container(
                 alignment: Alignment.center,
                 child: Text("Flare"),
               ),
               onPressed: () {
-                Navigator.pushNamed(context, RouteGenerator.ROUTE_FLARE);
-              },
-            ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("GoogleMap"),
-              ),
-              onPressed: () {
-                Navigator.pushNamed(
-                    context, RouteGenerator.ROUTE_HOMEGOOGLEMAPS);
+                Modular.to.pushNamed('/home/flare');
               },
             ),
             RaisedButton(
@@ -186,51 +166,7 @@ class _HomePageState extends State<HomePage> {
                 child: Text("InputData"),
               ),
               onPressed: () {
-                Navigator.pushNamed(
-                    context, RouteGenerator.ROUTE_HOMEINPUTDATA);
-              },
-            ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("SharedPreference"),
-              ),
-              onPressed: () {
-                Navigator.pushNamed(
-                    context, RouteGenerator.ROUTE_SHAREDPREFERENCE);
-              },
-            ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("ReorderableListView"),
-              ),
-              onPressed: () {
-                Navigator.pushNamed(
-                    context, RouteGenerator.ROUTE_REORDERAVLELISTVIEW);
-              },
-            ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Table"),
-              ),
-              onPressed: () {
-                Navigator.pushNamed(context, RouteGenerator.ROUTE_HOMETABLE);
-              },
-            ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Text"),
-              ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => HomeText(),
-                  ),
-                );
+                Modular.to.pushNamed('/home/inputdata');
               },
             ),
             RaisedButton(
@@ -239,10 +175,54 @@ class _HomePageState extends State<HomePage> {
                 child: Text("Navigation"),
               ),
               onPressed: () {
-                Navigator.pushNamed(
-                    context, RouteGenerator.ROUTE_HOMENAVIGATION);
+                Modular.to.pushNamed('/home/navigation');
               },
-            ), */
+            ),
+            RaisedButton(
+              child: Container(
+                alignment: Alignment.center,
+                child: Text("ReorderableListView"),
+              ),
+              onPressed: () {
+                Modular.to.pushNamed('/home/reorderable');
+              },
+            ),
+            RaisedButton(
+              child: Container(
+                alignment: Alignment.center,
+                child: Text("SharedPreference"),
+              ),
+              onPressed: () {
+                Modular.to.pushNamed('/home/sharedpreference');
+              },
+            ),
+            RaisedButton(
+              child: Container(
+                alignment: Alignment.center,
+                child: Text("SqFlite"),
+              ),
+              onPressed: () {
+                Modular.to.pushNamed('/home/sqflite');
+              },
+            ),
+            RaisedButton(
+              child: Container(
+                alignment: Alignment.center,
+                child: Text("Table"),
+              ),
+              onPressed: () {
+                Modular.to.pushNamed('/home/table');
+              },
+            ),
+            RaisedButton(
+              child: Container(
+                alignment: Alignment.center,
+                child: Text("Text"),
+              ),
+              onPressed: () {
+                Modular.to.pushNamed('/home/text');
+              },
+            ),
           ],
         ),
       ),
