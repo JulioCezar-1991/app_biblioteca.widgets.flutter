@@ -9,29 +9,32 @@ part 'theme_controller.g.dart';
 class ThemeController = _ThemeControllerBase with _$ThemeController;
 
 abstract class _ThemeControllerBase with Store {
-  /* @observable
+  _ThemeControllerBase() {
+    load();
+  }
   var theme = lightTheme();
 
+  @action
   change(String color) {
     switch (color) {
       case 'light':
         {
-          theme = lightTheme();
-
+          this.theme = lightTheme();
+          Settings.theme = 'light';
           break;
         }
 
       case 'dark':
         {
-          theme = darkTheme();
-
+          this.theme = darkTheme();
+          Settings.theme = "dark";
           break;
         }
 
       default:
         {
-          theme = lightTheme();
-
+          this.theme = lightTheme();
+          Settings.theme = "light";
           break;
         }
     }
@@ -43,11 +46,10 @@ abstract class _ThemeControllerBase with Store {
     await prefs.setString('theme', theme);
   }
 
-  @observable
   Future load() async {
     var prefs = await SharedPreferences.getInstance();
     var theme = prefs.getString('theme');
     Settings.theme = theme.isEmpty ? 'light' : theme;
     change(Settings.theme);
-  } */
+  }
 }

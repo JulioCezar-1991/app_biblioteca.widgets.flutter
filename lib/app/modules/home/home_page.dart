@@ -2,7 +2,6 @@ import 'package:app_flutter_biblioteca/app/themes/theme_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:mobx/mobx.dart';
 
 class HomePage extends StatefulWidget {
   final String title;
@@ -15,7 +14,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    final controller = ThemeController();
+    final controller = Modular.get<ThemeController>();
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
               child: Image.asset('assets/icons/Clone-Old-icon.png'),
             ),
             onTap: () {
-              /* controller.save("light"); */
+              controller.save('light');
               controller.change('light');
             },
           ),
@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
               child: Image.asset('assets/icons/Darth-Vader-icon.png'),
             ),
             onTap: () {
-              /* controller.save("dark"); */
+              controller.save('dark');
               controller.change('dark');
             },
           ),
