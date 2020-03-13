@@ -95,6 +95,15 @@ class _HomePageState extends State<HomePage> {
             RaisedButton(
               child: Container(
                 alignment: Alignment.center,
+                child: Text("BoxController"),
+              ),
+              onPressed: () {
+                Modular.to.pushNamed('/home/boxcontroller');
+              },
+            ),
+            RaisedButton(
+              child: Container(
+                alignment: Alignment.center,
                 child: Text("Cards"),
               ),
               onPressed: () {
@@ -140,21 +149,20 @@ class _HomePageState extends State<HomePage> {
             RaisedButton(
               child: Container(
                 alignment: Alignment.center,
-                child: Text("BoxController"),
-              ),
-              onPressed: () {
-                Modular.to.pushNamed('/home/boxcontroller');
-              },
-            ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
                 child: Text("Flare"),
               ),
               onPressed: () {
                 Modular.to.pushNamed('/home/flare');
               },
             ),
+            RaisedButton(
+                child: Container(
+                  alignment: Alignment.center,
+                  child: Text("GoogleMap"),
+                ),
+                onPressed: () {
+                  Modular.to.pushNamed('/home/googlemap');
+                }),
             RaisedButton(
               child: Container(
                 alignment: Alignment.center,

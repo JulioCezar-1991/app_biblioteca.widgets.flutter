@@ -1,14 +1,20 @@
-import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:geolocator/geolocator.dart';
 
-class GeolocatorFromAddress extends StatefulWidget {
+import 'package:flutter/material.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+
+class GeolocatorFromAddressPage extends StatefulWidget {
+  final String title;
+  const GeolocatorFromAddressPage(
+      {Key key, this.title = "GeolocatorFromAddress"})
+      : super(key: key);
   @override
-  _GeolocatorFromAddressState createState() => _GeolocatorFromAddressState();
+  _GeolocatorFromAddressPageState createState() =>
+      _GeolocatorFromAddressPageState();
 }
 
-class _GeolocatorFromAddressState extends State<GeolocatorFromAddress> {
+class _GeolocatorFromAddressPageState extends State<GeolocatorFromAddressPage> {
   Completer<GoogleMapController> _controller = Completer();
   CameraPosition _posicaoCamera = CameraPosition(
     target: LatLng(-16.735571, -49.265306),
@@ -80,7 +86,7 @@ class _GeolocatorFromAddressState extends State<GeolocatorFromAddress> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Mapas e geolocalização"),
+        title: Text(widget.title),
       ),
       body: Container(
         child: GoogleMap(

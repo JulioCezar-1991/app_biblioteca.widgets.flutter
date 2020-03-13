@@ -1,98 +1,85 @@
-import 'package:flutter/material.dart';
 import 'dart:async';
+
+import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-class PolygonsPolylines extends StatefulWidget {
+class PolygonsPolylinesPage extends StatefulWidget {
+  final String title;
+  const PolygonsPolylinesPage({Key key, this.title = "Polygonspolylines"})
+      : super(key: key);
+
   @override
-  _PolygonsPolylinesState createState() => _PolygonsPolylinesState();
+  _PolygonsPolylinesPageState createState() => _PolygonsPolylinesPageState();
 }
 
-class _PolygonsPolylinesState extends State<PolygonsPolylines> {
-
+class _PolygonsPolylinesPageState extends State<PolygonsPolylinesPage> {
   Completer<GoogleMapController> _controller = Completer();
   Set<Marker> _marcadores = {};
-  Set<Polygon> _polygons  = {};
-  Set<Polyline> _polylines  = {};
+  Set<Polygon> _polygons = {};
+  Set<Polyline> _polylines = {};
 
-  _onMapCreated( GoogleMapController googleMapController ){
-    _controller.complete( googleMapController );
+  _onMapCreated(GoogleMapController googleMapController) {
+    _controller.complete(googleMapController);
   }
 
   _movimentarCamera() async {
-
     GoogleMapController googleMapController = await _controller.future;
-    googleMapController.animateCamera(
-      CameraUpdate.newCameraPosition(
+    googleMapController.animateCamera(CameraUpdate.newCameraPosition(
         CameraPosition(
             target: LatLng(-23.562436, -46.655005),
             zoom: 16,
             tilt: 0,
-            bearing: 270
-        )
-      )
-    );
-
+            bearing: 270)));
   }
 
-  _carregarMarcadores(){
-
+  _carregarMarcadores() {
     Set<Marker> marcadoresLocal = {};
 
     Marker marcadorShopping = Marker(
         markerId: MarkerId("marcador-shopping"),
         position: LatLng(-23.563370, -46.652923),
-      infoWindow: InfoWindow(
-        title: "Shopping Cidade São Paulo"
-      ),
-      icon: BitmapDescriptor.defaultMarkerWithHue(
-        BitmapDescriptor.hueMagenta
-      ),
-      onTap: (){
-        print("Shopping clicado!!");
-      }
-      //rotation: 45
-    );
+        infoWindow: InfoWindow(title: "Shopping Cidade São Paulo"),
+        icon:
+            BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueMagenta),
+        onTap: () {
+          print("Shopping clicado!!");
+        }
+        //rotation: 45
+        );
 
     Marker marcadorCartorio = Marker(
         markerId: MarkerId("marcador-cartorio"),
         position: LatLng(-23.562868, -46.655874),
-      infoWindow: InfoWindow(
-          title: "12 Cartório de notas"
-      ),
-      icon: BitmapDescriptor.defaultMarkerWithHue(
-        BitmapDescriptor.hueBlue
-      ),
-        onTap: (){
+        infoWindow: InfoWindow(title: "12 Cartório de notas"),
+        icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueBlue),
+        onTap: () {
           print("Cartório clicado!!");
-        }
-    );
+        });
 
-    marcadoresLocal.add( marcadorShopping );
-    marcadoresLocal.add( marcadorCartorio );
+    marcadoresLocal.add(marcadorShopping);
+    marcadoresLocal.add(marcadorCartorio);
 
     setState(() {
       _marcadores = marcadoresLocal;
     });
-    
-    
+
     Set<Polygon> listaPolygons = {};
     Polygon polygon1 = Polygon(
         polygonId: PolygonId("polygon1"),
-      fillColor: Colors.green,
-      strokeColor: Colors.red,
-      strokeWidth: 20,
-      points: [
-        LatLng(-23.561816, -46.652044),
-        LatLng(-23.563625, -46.653642),
-        LatLng(-23.564786, -46.652226),
-        LatLng(-23.563085, -46.650531),
-      ],
-      consumeTapEvents: true,
-      onTap: (){
-        print("clicado na área");
-      },
-      zIndex: 1
-    );
+        fillColor: Colors.green,
+        strokeColor: Colors.red,
+        strokeWidth: 20,
+        points: [
+          LatLng(-23.561816, -46.652044),
+          LatLng(-23.563625, -46.653642),
+          LatLng(-23.564786, -46.652226),
+          LatLng(-23.563085, -46.650531),
+        ],
+        consumeTapEvents: true,
+        onTap: () {
+          print("clicado na área");
+        },
+        zIndex: 1);
 
     Polygon polygon2 = Polygon(
         polygonId: PolygonId("polygon2"),
@@ -105,19 +92,17 @@ class _PolygonsPolylinesState extends State<PolygonsPolylines> {
           LatLng(-23.562032, -46.650831),
         ],
         consumeTapEvents: true,
-        onTap: (){
+        onTap: () {
           print("clicado na área");
         },
-      zIndex: 0
-    );
+        zIndex: 0);
 
-    listaPolygons.add( polygon1 );
-    listaPolygons.add( polygon2 );
+    listaPolygons.add(polygon1);
+    listaPolygons.add(polygon2);
 
     setState(() {
       _polygons = listaPolygons;
     });
-    
 
     Set<Polyline> listaPolylines = {};
     Polyline polyline = Polyline(
@@ -133,16 +118,14 @@ class _PolygonsPolylinesState extends State<PolygonsPolylines> {
           LatLng(-23.563232, -46.648020),
         ],
         consumeTapEvents: true,
-        onTap: (){
+        onTap: () {
           print("clicado na área");
-        }
-    );
+        });
 
-    listaPolylines.add( polyline );
+    listaPolylines.add(polyline);
     setState(() {
       _polylines = listaPolylines;
     });
-
   }
 
   @override
@@ -154,23 +137,21 @@ class _PolygonsPolylinesState extends State<PolygonsPolylines> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Mapas e geolocalização"),),
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
       floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.done),
-          onPressed: _movimentarCamera
-      ),
+          child: Icon(Icons.done), onPressed: _movimentarCamera),
       body: Container(
         child: GoogleMap(
-            mapType: MapType.normal,
-            initialCameraPosition: CameraPosition(
-                target: LatLng(-23.565160, -46.651797),
-                zoom: 19
-            ),
-            onMapCreated: _onMapCreated,
-            markers: _marcadores,
-            polygons: _polygons,
-            polylines: _polylines,
+          mapType: MapType.normal,
+          initialCameraPosition:
+              CameraPosition(target: LatLng(-23.565160, -46.651797), zoom: 19),
+          onMapCreated: _onMapCreated,
+          markers: _marcadores,
+          polygons: _polygons,
+          polylines: _polylines,
         ),
       ),
     );

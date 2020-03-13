@@ -15,4 +15,17 @@ mixin _$ThemeController on _ThemeControllerBase, Store {
   Future save(dynamic theme) {
     return _$saveAsyncAction.run(() => super.save(theme));
   }
+
+  final _$_ThemeControllerBaseActionController =
+      ActionController(name: '_ThemeControllerBase');
+
+  @override
+  dynamic change(String color) {
+    final _$actionInfo = _$_ThemeControllerBaseActionController.startAction();
+    try {
+      return super.change(color);
+    } finally {
+      _$_ThemeControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
 }

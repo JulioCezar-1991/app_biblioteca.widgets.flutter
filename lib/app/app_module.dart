@@ -1,6 +1,3 @@
-import 'package:app_flutter_biblioteca/app/modules/googlemap-c_controller.dart';
-import 'package:app_flutter_biblioteca/app/modules/firebase_controller.dart';
-import 'package:app_flutter_biblioteca/app/modules/pages/pages_controller.dart';
 import 'package:app_flutter_biblioteca/app/app_controller.dart';
 import 'package:app_flutter_biblioteca/app/modules/splash/splash_module.dart';
 import 'package:app_flutter_biblioteca/app/themes/theme_controller.dart';
@@ -12,9 +9,6 @@ import 'modules/home/home_module.dart';
 class AppModule extends MainModule {
   @override
   List<Bind> get binds => [
-        Bind((i) => Googlemap - cController()),
-        Bind((i) => FirebaseController()),
-        Bind((i) => PagesController()),
         Bind((i) => AppController()),
         Bind((i) => ThemeController()),
       ];

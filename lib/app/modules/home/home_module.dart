@@ -10,6 +10,7 @@ import 'package:app_flutter_biblioteca/app/modules/charts/charts_module.dart';
 import 'package:app_flutter_biblioteca/app/modules/datetime/datetime_module.dart';
 import 'package:app_flutter_biblioteca/app/modules/decorations/decorations_module.dart';
 import 'package:app_flutter_biblioteca/app/modules/flare/flare_module.dart';
+import 'package:app_flutter_biblioteca/app/modules/googlemap/googlemap_module.dart';
 import 'package:app_flutter_biblioteca/app/modules/home/home_controller.dart';
 import 'package:app_flutter_biblioteca/app/modules/home/home_page.dart';
 import 'package:app_flutter_biblioteca/app/modules/inputdata/inputdata_module.dart';
@@ -44,6 +45,7 @@ class HomeModule extends ChildModule {
         Router('/decorations', module: DecorationsModule()),
         Router('/validator', module: ValidatorModule()),
         Router('/flare', module: FlareModule()),
+        Router('/googlemap', module: GooglemapModule()),
         Router('/inputdata', module: InputdataModule()),
         Router('/navigation', module: NavigationModule()),
         Router('/reorderable', module: ReordenableModule()),
