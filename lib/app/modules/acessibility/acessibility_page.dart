@@ -1,3 +1,4 @@
+import 'package:app_flutter_biblioteca/app/components/custom_botton_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -14,24 +15,21 @@ class _AcessibilityPageState extends State<AcessibilityPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(widget.title),
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Container(
+        child: ListView(
+          children: <Widget>[
+            CustomBotton(
+              title: "ToolTip",
+              onPressed: () {
+                Modular.to.pushNamed('/home/acessibility/tooltip');
+              },
+            )
+          ],
         ),
-        body: Container(
-          padding: EdgeInsets.only(left: 20, right: 20),
-          child: ListView(
-            children: <Widget>[
-              RaisedButton(
-                child: Container(
-                  alignment: Alignment.center,
-                  child: Text("ToolTip"),
-                ),
-                onPressed: () {
-                  Modular.to.pushNamed('/home/acessibility/tooltip');
-                },
-              ),
-            ],
-          ),
-        ));
+      ),
+    );
   }
 }

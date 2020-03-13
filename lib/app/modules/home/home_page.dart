@@ -1,6 +1,6 @@
+import 'package:app_flutter_biblioteca/app/components/custom_botton_widget.dart';
 import 'package:app_flutter_biblioteca/app/themes/theme_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 class HomePage extends StatefulWidget {
@@ -44,193 +44,130 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: Container(
-        padding: EdgeInsets.only(left: 20, right: 20),
         child: ListView(
           children: <Widget>[
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Accessibility"),
-              ),
+            CustomBotton(
+              title: "Accessibility",
               onPressed: () {
                 Modular.to.pushNamed('/home/acessibility');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text('AlertDisplay'),
-              ),
+            CustomBotton(
+              title: "AlertDisplay",
               onPressed: () {
                 Modular.to.pushNamed('/home/alertdisplay');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Animated"),
-              ),
+            CustomBotton(
+              title: "Animated",
               onPressed: () {
                 Modular.to.pushNamed('/home/animated');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("AudioPlay"),
-              ),
+            CustomBotton(
+              title: "AudioPlay",
               onPressed: () {
                 Modular.to.pushNamed('/home/audioplay');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Buttons"),
-              ),
+            CustomBotton(
+              title: "Buttons",
               onPressed: () {
                 Modular.to.pushNamed('/home/buttons');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("BoxController"),
-              ),
+            CustomBotton(
+              title: "BoxController",
               onPressed: () {
                 Modular.to.pushNamed('/home/boxcontroller');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Cards"),
-              ),
+            CustomBotton(
+              title: "Cards",
               onPressed: () {
                 Modular.to.pushNamed('/home/card');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("CameraGallery"),
-              ),
+            CustomBotton(
+              title: "CameraGallery",
               onPressed: () {
                 Modular.to.pushNamed('/home/cameragallery');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Charts"),
-              ),
+            CustomBotton(
+              title: "Charts",
               onPressed: () {
                 Modular.to.pushNamed('/home/charts');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("DateTime"),
-              ),
+            CustomBotton(
+              title: "DateTime",
               onPressed: () {
                 Modular.to.pushNamed('/home/datetime');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Decorations"),
-              ),
+            CustomBotton(
+              title: "Decorations",
               onPressed: () {
                 Modular.to.pushNamed('/home/decorations');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Flare"),
-              ),
+            CustomBotton(
+              title: "Flare",
               onPressed: () {
                 Modular.to.pushNamed('/home/flare');
               },
             ),
-            RaisedButton(
-                child: Container(
-                  alignment: Alignment.center,
-                  child: Text("GoogleMap"),
-                ),
-                onPressed: () {
-                  Modular.to.pushNamed('/home/googlemap');
-                }),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("InputData"),
-              ),
+            CustomBotton(
+              title: "GoogleMap",
+              onPressed: () {
+                Modular.to.pushNamed('/home/googlemap');
+              },
+            ),
+            CustomBotton(
+              title: "InputData",
               onPressed: () {
                 Modular.to.pushNamed('/home/inputdata');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Navigation"),
-              ),
+            CustomBotton(
+              title: "Navigation",
               onPressed: () {
                 Modular.to.pushNamed('/home/navigation');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text('Validator'),
-              ),
+            CustomBotton(
+              title: "Validator",
               onPressed: () {
                 Modular.to.pushNamed('/home/validator');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("ReorderableListView"),
-              ),
+            CustomBotton(
+              title: "ReorderableListView",
               onPressed: () {
                 Modular.to.pushNamed('/home/reorderable');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("SharedPreference"),
-              ),
+            CustomBotton(
+              title: "SharedPreference",
               onPressed: () {
                 Modular.to.pushNamed('/home/sharedpreference');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("SqFlite"),
-              ),
+            CustomBotton(
+              title: "SqFlite",
               onPressed: () {
                 Modular.to.pushNamed('/home/sqflite');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Table"),
-              ),
+            CustomBotton(
+              title: "Tables",
               onPressed: () {
                 Modular.to.pushNamed('/home/table');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Text"),
-              ),
+            CustomBotton(
+              title: "Text",
               onPressed: () {
                 Modular.to.pushNamed('/home/text');
               },

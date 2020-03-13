@@ -11,7 +11,7 @@ class AppWidget extends StatelessWidget {
       navigatorKey: Modular.navigatorKey,
       title: 'Flutter Widgets',
       debugShowCheckedModeBanner: false,
-      theme: store.theme,
+      theme: store.getTheme(),
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate
