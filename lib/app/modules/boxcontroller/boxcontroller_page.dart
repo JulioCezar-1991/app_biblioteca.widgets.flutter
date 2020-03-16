@@ -1,9 +1,10 @@
+import 'package:app_flutter_biblioteca/app/components/custom_botton_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 class BoxcontrollerPage extends StatefulWidget {
   final String title;
-  const BoxcontrollerPage({Key key, this.title = "Boxcontroller"})
+  const BoxcontrollerPage({Key key, this.title = "BoxController"})
       : super(key: key);
 
   @override
@@ -18,32 +19,22 @@ class _BoxcontrollerPageState extends State<BoxcontrollerPage> {
         title: Text(widget.title),
       ),
       body: Container(
-        padding: EdgeInsets.only(left: 20, right: 20),
         child: ListView(
           children: <Widget>[
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Flow"),
-              ),
+            CustomBotton(
+              title: 'Flow',
               onPressed: () {
                 Modular.to.pushNamed('/home/boxcontroller/flow');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("LimitedBox"),
-              ),
+            CustomBotton(
+              title: 'LimitedBox',
               onPressed: () {
                 Modular.to.pushNamed('/home/boxcontroller/limitedbox');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Wrap"),
-              ),
+            CustomBotton(
+              title: 'Wrap',
               onPressed: () {
                 Modular.to.pushNamed('/home/boxcontroller/wrap');
               },

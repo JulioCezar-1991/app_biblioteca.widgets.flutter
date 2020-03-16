@@ -62,7 +62,6 @@ class _NavigationAppBarBottomState extends State<NavigationAppBarBottom> {
             ),
           ),
           BottomNavigationBarItem(
-            backgroundColor: Theme.of(context).primaryColor,
             icon: Icon(Icons.person_outline),
             title: Container(
               height: 5.0,

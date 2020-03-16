@@ -1,4 +1,5 @@
 import 'package:app_flutter_biblioteca/app/modules/navigation/navigation_controller.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:app_flutter_biblioteca/app/modules/navigation/pages/navigation_app_bar.dart';
 import 'package:app_flutter_biblioteca/app/modules/navigation/pages/navigation_app_bar_bottom.dart';
 import 'package:app_flutter_biblioteca/app/modules/navigation/pages/navigation_between.dart';
@@ -7,10 +8,9 @@ import 'package:app_flutter_biblioteca/app/modules/navigation/pages/navigation_c
 import 'package:app_flutter_biblioteca/app/modules/navigation/pages/navigation_drawer.dart';
 import 'package:app_flutter_biblioteca/app/modules/navigation/pages/navigation_expansion_tile.dart';
 import 'package:app_flutter_biblioteca/app/modules/navigation/pages/navigation_listview_builder.dart';
-import 'package:app_flutter_biblioteca/app/modules/navigation/pages/navigation_page_view_builder.dart';
+import 'package:app_flutter_biblioteca/app/modules/navigation/pages/navigation_pageview_builder.dart';
 import 'package:app_flutter_biblioteca/app/modules/navigation/pages/navigation_stepper.dart';
 import 'package:app_flutter_biblioteca/app/modules/navigation/pages/navigation_tab_bar.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:app_flutter_biblioteca/app/modules/navigation/navigation_page.dart';
 
 class NavigationModule extends ChildModule {

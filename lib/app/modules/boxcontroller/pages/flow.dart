@@ -25,7 +25,7 @@ class FlowExampleState extends State<FlowExample>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Flow Widget"),
+        title: Text("Flow"),
       ),
       body: Center(
         child: Flow(

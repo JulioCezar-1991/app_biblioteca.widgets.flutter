@@ -30,6 +30,8 @@ dependencies:
   shared_preferences: any
   sqflite: ^1.2.0
 
+  badges: ^1.1.1
+
   flare_flutter: any
 
   provider: any

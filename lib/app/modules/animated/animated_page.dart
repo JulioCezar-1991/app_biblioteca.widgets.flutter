@@ -1,3 +1,4 @@
+import 'package:app_flutter_biblioteca/app/components/custom_botton_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -17,86 +18,58 @@ class _AnimatedPageState extends State<AnimatedPage> {
         title: Text(widget.title),
       ),
       body: Container(
-        padding: EdgeInsets.only(left: 20, right: 20),
         child: ListView(
           children: <Widget>[
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("AnimatedButton"),
-              ),
+            CustomBotton(
+              title: 'AnimatedButton',
               onPressed: () {
                 Modular.to.pushNamed('/home/animated/button');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("AnimatedCrossFade"),
-              ),
+            CustomBotton(
+              title: 'AnimatedCrossFade',
               onPressed: () {
                 Modular.to.pushNamed('/home/animated/cross');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Dismissible"),
-              ),
+            CustomBotton(
+              title: 'Dismissible',
               onPressed: () {
                 Modular.to.pushNamed('/home/animated/dismissible');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("DragTarget"),
-              ),
+            CustomBotton(
+              title: 'DragTarget',
               onPressed: () {
                 Modular.to.pushNamed('/home/animated/drog');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("AnimatedIcons"),
-              ),
+            CustomBotton(
+              title: 'AnimatedIcons',
               onPressed: () {
                 Modular.to.pushNamed('/home/animated/icons');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("AnimatedRotationTransition"),
-              ),
+            CustomBotton(
+              title: 'AnimatedRotationTransition',
               onPressed: () {
                 Modular.to.pushNamed('/home/animated/rotation');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("AnimatedSize"),
-              ),
+            CustomBotton(
+              title: 'AnimatedSize',
               onPressed: () {
                 Modular.to.pushNamed('/home/animated/size');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("StaggerAnimation"),
-              ),
+            CustomBotton(
+              title: 'StaggerAnimation',
               onPressed: () {
                 Modular.to.pushNamed('/home/animated/stagger');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("AnimatedSwitcher"),
-              ),
+            CustomBotton(
+              title: 'AnimatedSwitcher',
               onPressed: () {
                 Modular.to.pushNamed('/home/animated/switcher');
               },

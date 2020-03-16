@@ -1,3 +1,4 @@
+import 'package:app_flutter_biblioteca/app/components/custom_botton_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -17,104 +18,70 @@ class _NavigationPageState extends State<NavigationPage> {
         title: Text(widget.title),
       ),
       body: Container(
-        padding: EdgeInsets.only(left: 20, right: 20),
         child: ListView(
           children: <Widget>[
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("AppBar"),
-              ),
+            CustomBotton(
+              title: 'AppBar',
               onPressed: () {
                 Modular.to.pushNamed('/home/navigation/appbar');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("AppBarBottom"),
-              ),
+            CustomBotton(
+              title: 'AppBarBottom',
               onPressed: () {
                 Modular.to.pushNamed('/home/navigation/appbarbottom');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("NavigationBetweenScreen"),
-              ),
+            CustomBotton(
+              title: 'NavigationBetweenScreen',
               onPressed: () {
                 Modular.to.pushNamed('/home/navigation/between');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("BottomSheet"),
-              ),
+            CustomBotton(
+              title: 'BottomSheet',
               onPressed: () {
                 Modular.to.pushNamed('/home/navigation/bottomsheet');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("CollapsibleToolbar"),
-              ),
+            CustomBotton(
+              title: 'CollapsibleToolbar',
               onPressed: () {
                 Modular.to.pushNamed('/home/navigation/collapsible');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Drawer"),
-              ),
+            CustomBotton(
+              title: 'Drawer',
               onPressed: () {
                 Modular.to.pushNamed('/home/navigation/drawer');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("ExpansionTile"),
-              ),
+            CustomBotton(
+              title: 'ExpansionTile',
               onPressed: () {
                 Modular.to.pushNamed('/home/navigation/expansiontile');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("ListViewBuilder"),
-              ),
+            CustomBotton(
+              title: 'ListViewBuilder',
               onPressed: () {
                 Modular.to.pushNamed('/home/navigation/listview');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("PageViewBuilder"),
-              ),
+            CustomBotton(
+              title: 'PageViewBuilder',
               onPressed: () {
                 Modular.to.pushNamed('/home/navigation/pageview');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Stepper"),
-              ),
+            CustomBotton(
+              title: 'Stepper',
               onPressed: () {
                 Modular.to.pushNamed('/home/navigation/stepper');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("TabBar"),
-              ),
+            CustomBotton(
+              title: 'TabBar',
               onPressed: () {
                 Modular.to.pushNamed('/home/navigation/tabbar');
               },

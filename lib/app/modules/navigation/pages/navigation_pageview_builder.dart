@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class NavigationPageViewBuilder extends StatefulWidget {
   @override
-  _NavigationPageViewBuilderState createState() => _NavigationPageViewBuilderState();
+  _NavigationPageViewBuilderState createState() =>
+      _NavigationPageViewBuilderState();
 }
 
 class _NavigationPageViewBuilderState extends State<NavigationPageViewBuilder> {
-  
   PageController controller;
 
   @override
@@ -27,12 +27,11 @@ class _NavigationPageViewBuilderState extends State<NavigationPageViewBuilder> {
 
   @override
   Widget build(BuildContext context) {
-
     List<String> pages = ["Batata", "Cenoura", "Abacate", "Tomate"];
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("PageView"),
+        title: Text("PageViewBuild"),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.keyboard_arrow_left),

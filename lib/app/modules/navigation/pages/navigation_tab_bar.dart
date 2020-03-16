@@ -5,7 +5,6 @@
 import 'package:flutter/material.dart';
 
 class NavigationTabBar extends StatefulWidget {
-
   @override
   _NavigationTabBarState createState() => _NavigationTabBarState();
 }
@@ -13,7 +12,6 @@ class NavigationTabBar extends StatefulWidget {
 class _NavigationTabBarState extends State<NavigationTabBar>
     with SingleTickerProviderStateMixin {
   TabController _tabController;
-  
 
   @override
   void initState() {
@@ -28,22 +26,21 @@ class _NavigationTabBarState extends State<NavigationTabBar>
         title: Text("TabBar"),
         bottom: TabBar(
           isScrollable: false,
-          indicatorColor: Colors.purple,
+          indicatorColor: Colors.teal,
           indicatorSize: TabBarIndicatorSize.label,
-          indicatorWeight: 5,
-          labelColor: Colors.purple,
-          unselectedLabelColor: Colors.white,
+          indicatorWeight: 1,
+          labelColor: Colors.greenAccent,
+          unselectedLabelColor: Colors.teal,
           indicator: BoxDecoration(
             border: Border(
               bottom: BorderSide(
-                color: Colors.purple,
+                color: Colors.greenAccent,
                 width: 4.0,
               ),
             ),
-            
           ),
           tabs: [
-            Tab(      
+            Tab(
               icon: Icon(Icons.home),
               text: "Home",
             ),
@@ -61,14 +58,17 @@ class _NavigationTabBarState extends State<NavigationTabBar>
       ),
       body: TabBarView(
         children: <Widget>[
-          Container(
-            color: Colors.white,
+          Center(
+            child: Text("Home",
+                style: TextStyle(fontSize: 30, color: Colors.green)),
           ),
-          Container(
-            color: Colors.purple[200],
+          Center(
+            child: Text("Shopping",
+                style: TextStyle(fontSize: 30, color: Colors.green)),
           ),
-          Container(
-            color: Colors.white,
+          Center(
+            child: Text("Search",
+                style: TextStyle(fontSize: 30, color: Colors.green)),
           ),
         ],
         controller: _tabController,

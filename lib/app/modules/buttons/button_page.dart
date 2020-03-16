@@ -1,3 +1,4 @@
+import 'package:app_flutter_biblioteca/app/components/custom_botton_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -17,16 +18,18 @@ class _ButtonPageState extends State<ButtonPage> {
         title: Text(widget.title),
       ),
       body: Container(
-        padding: EdgeInsets.only(left: 20, right: 20),
         child: ListView(
           children: <Widget>[
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("FloatingActionButton"),
-              ),
+            CustomBotton(
+              title: 'FloatingActionButton',
               onPressed: () {
                 Modular.to.pushNamed('/home/buttons/floatingbutton');
+              },
+            ),
+            CustomBotton(
+              title: 'Badges',
+              onPressed: () {
+                Modular.to.pushNamed('/home/buttons/badges');
               },
             ),
           ],

@@ -24,7 +24,7 @@ class _NavigationListViewBuilderState extends State<NavigationListViewBuilder> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Navegação por lista"),
+        title: Text("ListViewBuild"),
       ),
       body: ListView.builder(
         itemCount: 12,
@@ -50,7 +50,6 @@ class _NavigationListViewBuilderState extends State<NavigationListViewBuilder> {
 }
 
 class SecondScreen extends StatelessWidget {
-
   final int index;
 
   const SecondScreen({Key key, this.index}) : super(key: key);

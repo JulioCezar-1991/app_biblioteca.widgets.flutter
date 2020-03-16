@@ -1,3 +1,4 @@
+import 'package:app_flutter_biblioteca/app/components/custom_botton_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -18,43 +19,30 @@ class _AlertDisplayPageState extends State<AlertDisplayPage> {
         title: Text(widget.title),
       ),
       body: Container(
-        padding: EdgeInsets.only(left: 20, right: 20),
         child: ListView(
           children: <Widget>[
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("ShowDialog"),
-              ),
+            CustomBotton(
+              title: 'ShowDialog',
               onPressed: () {
                 Modular.to.pushNamed('/home/alertdisplay/alert');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("GeneralDialog"),
-              ),
+            CustomBotton(
+              title: 'GeneralDialog',
               onPressed: () {
                 Modular.to.pushNamed('/home/alertdisplay/general');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("ShowAboutDialog"),
-              ),
+            CustomBotton(
+              title: 'ShowAboutDialog',
               onPressed: () {
                 Modular.to.pushNamed('/home/alertdisplay/about');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("SnackBar"),
-              ),
+            CustomBotton(
+              title: 'SnackBar',
               onPressed: () {
-                Modular.to.pushNamed('/home/alertdisplay/snackbar');
+                Modular.to.pushNamed('/home/buttons/badges');
               },
             ),
           ],

@@ -1,3 +1,4 @@
+import 'package:app_flutter_biblioteca/app/components/custom_botton_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -18,62 +19,53 @@ class _InputdataPageState extends State<InputdataPage> {
       ),
       body: Container(
         padding: EdgeInsets.only(left: 20, right: 20),
-        child: ListView(children: <Widget>[
-          RaisedButton(
-            child: Container(
-              alignment: Alignment.center,
-              child: Text("CheakBox"),
+        child: ListView(
+          children: <Widget>[
+            CustomBotton(
+              title: 'CheakBox',
+              onPressed: () {
+                Modular.to.pushNamed('/home/inputdata/cheakbox');
+              },
             ),
-            onPressed: () {
-              Modular.to.pushNamed('/home/inputdata/cheakbox');
-            },
-          ),
-          RaisedButton(
-            child: Container(
-              alignment: Alignment.center,
-              child: Text("DataBetween"),
+            CustomBotton(
+              title: 'DataBetween',
+              onPressed: () {
+                Modular.to.pushNamed('/home/inputdata/databetwwen');
+              },
             ),
-            onPressed: () {
-              Modular.to.pushNamed('/home/inputdata/databetwwen');
-            },
-          ),
-          RaisedButton(
-            child: Container(
-              alignment: Alignment.center,
-              child: Text("RadioButton"),
+            RaisedButton(
+              child: Container(
+                alignment: Alignment.center,
+                child: Text("DataBetween"),
+              ),
+              onPressed: () {},
             ),
-            onPressed: () {
-              Modular.to.pushNamed('/home/inputdata/radiobutton');
-            },
-          ),
-          RaisedButton(
-            child: Container(
-              alignment: Alignment.center,
-              child: Text("Switch"),
+            CustomBotton(
+              title: 'RadioButton',
+              onPressed: () {
+                Modular.to.pushNamed('/home/inputdata/radiobutton');
+              },
             ),
-            onPressed: () {
-              Modular.to.pushNamed('/home/inputdata/switch');
-            },
-          ),
-          RaisedButton(
-            child: Container(
-              alignment: Alignment.center,
-              child: Text("Slider"),
+            CustomBotton(
+              title: 'Switch',
+              onPressed: () {
+                Modular.to.pushNamed('/home/inputdata/switch');
+              },
             ),
-            onPressed: () {
-              Modular.to.pushNamed('/home/inputdata/slider');
-            },
-          ),
-          RaisedButton(
-            child: Container(
-              alignment: Alignment.center,
-              child: Text("TextField"),
+            CustomBotton(
+              title: 'Slider',
+              onPressed: () {
+                Modular.to.pushNamed('/home/inputdata/slider');
+              },
             ),
-            onPressed: () {
-              Modular.to.pushNamed('/home/inputdata/textfield');
-            },
-          ),
-        ]),
+            CustomBotton(
+              title: 'TextField',
+              onPressed: () {
+                Modular.to.pushNamed('/home/inputdata/textfield');
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
