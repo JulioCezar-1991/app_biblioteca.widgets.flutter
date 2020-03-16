@@ -14,7 +14,7 @@ import 'package:app_flutter_biblioteca/app/modules/googlemap/googlemap_module.da
 import 'package:app_flutter_biblioteca/app/modules/home/home_controller.dart';
 import 'package:app_flutter_biblioteca/app/modules/home/home_page.dart';
 import 'package:app_flutter_biblioteca/app/modules/inputdata/inputdata_module.dart';
-import 'package:app_flutter_biblioteca/app/modules/navigation/navigation_module.dart';
+import 'package:app_flutter_biblioteca/app/modules/navigations/navigation_module.dart';
 import 'package:app_flutter_biblioteca/app/modules/reordenable/reordenable_module.dart';
 import 'package:app_flutter_biblioteca/app/modules/sharedpreference/sharedpreference_module.dart';
 import 'package:app_flutter_biblioteca/app/modules/sqflite/sqflite_module.dart';

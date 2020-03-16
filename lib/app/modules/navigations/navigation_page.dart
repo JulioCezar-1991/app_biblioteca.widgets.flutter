@@ -63,6 +63,12 @@ class _NavigationPageState extends State<NavigationPage> {
               },
             ),
             CustomBotton(
+              title: 'Hero',
+              onPressed: () {
+                Modular.to.pushNamed('/home/navigation/hero');
+              },
+            ),
+            CustomBotton(
               title: 'ListViewBuilder',
               onPressed: () {
                 Modular.to.pushNamed('/home/navigation/listview');

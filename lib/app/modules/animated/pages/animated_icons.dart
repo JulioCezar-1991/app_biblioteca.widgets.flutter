@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 
 class AnimatedIconsExemple extends StatefulWidget {
-
   @override
   _AnimatedIconsState createState() => _AnimatedIconsState();
 }
 
 class _AnimatedIconsState extends State<AnimatedIconsExemple>
-
     with SingleTickerProviderStateMixin {
   AnimationController _controller;
 
@@ -38,7 +36,7 @@ class _AnimatedIconsState extends State<AnimatedIconsExemple>
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        title: Text("Anumated Icons"),
+        title: Text("Animated Icons"),
       ),
       body: ListView(
         children: <Widget>[

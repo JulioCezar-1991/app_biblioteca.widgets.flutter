@@ -19,19 +19,38 @@ class _FloatingActionButtonPageState extends State<FloatingActionButtonPage> {
         /* shape: BeveledRectangleBorder(
           borderRadius: BorderRadius.circular(9)
         ), */
-        backgroundColor: Colors.purple[100],
-        foregroundColor: Colors.purple,
+        backgroundColor: Theme.of(context).primaryColor,
+        foregroundColor: Colors.white,
         elevation: 6,
-        icon: Icon(Icons.assignment_return),
+        icon: Icon(
+          Icons.shopping_cart,
+          color: Colors.white,
+        ),
         label: Text("Comprar"),
         onPressed: () {},
       ),
       bottomNavigationBar: BottomAppBar(
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             IconButton(
               onPressed: null,
-              icon: Icon(Icons.add),
+              icon: Icon(
+                Icons.add_shopping_cart,
+                color: Theme.of(context).primaryColor,
+                size: 30,
+              ),
+            ),
+            SizedBox(
+              width: 20,
+            ),
+            IconButton(
+              onPressed: null,
+              icon: Icon(
+                Icons.credit_card,
+                color: Theme.of(context).primaryColor,
+                size: 30,
+              ),
             ),
           ],
         ),

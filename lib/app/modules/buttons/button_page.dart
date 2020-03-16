@@ -27,6 +27,12 @@ class _ButtonPageState extends State<ButtonPage> {
               },
             ),
             CustomBotton(
+              title: 'FloatingActionButtonMenu',
+              onPressed: () {
+                Modular.to.pushNamed('/home/buttons/floatingbuttonmenu');
+              },
+            ),
+            CustomBotton(
               title: 'Badges',
               onPressed: () {
                 Modular.to.pushNamed('/home/buttons/badges');
