@@ -1,3 +1,4 @@
+import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 
 class CardPage extends StatefulWidget {
@@ -115,11 +116,16 @@ class _CardPageState extends State<CardPage> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.symmetric(vertical: 16.0),
-                      alignment: FractionalOffset.centerLeft,
-                      child: Image.asset('assets/images/MortalkombatLogo.png'),
                       height: 96.0,
                       width: 96.0,
+                      margin: EdgeInsets.symmetric(vertical: 16.0),
+                      alignment: FractionalOffset.centerLeft,
+                      child: FlareActor(
+                        "assets/mortal.flr",
+                        alignment: Alignment.center,
+                        fit: BoxFit.contain,
+                        animation: "Untitled",
+                      ),
                     ),
                   ],
                 ),

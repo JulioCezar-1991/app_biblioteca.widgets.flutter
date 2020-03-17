@@ -1,4 +1,6 @@
+import 'package:app_flutter_biblioteca/app/components/custom_botton_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 class ChartsPage extends StatefulWidget {
@@ -17,23 +19,22 @@ class _ChartsPageState extends State<ChartsPage> {
         title: Text(widget.title),
       ),
       body: Container(
-        padding: EdgeInsets.only(left: 20, right: 20),
         child: ListView(
           children: <Widget>[
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("PartsLine"),
-              ),
+            CustomBotton(
+              title: 'Calendar',
+              onPressed: () {
+                Modular.to.pushNamed('home/charts/calendarcopy');
+              },
+            ),
+            CustomBotton(
+              title: 'PartsLine',
               onPressed: () {
                 Modular.to.pushNamed('home/charts/partsline');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("PartsPie"),
-              ),
+            CustomBotton(
+              title: 'PartsPie',
               onPressed: () {
                 Modular.to.pushNamed('home/charts/partspie');
               },

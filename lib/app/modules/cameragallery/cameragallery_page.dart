@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:app_flutter_biblioteca/app/components/custom_botton_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -35,25 +36,17 @@ class _CameragalleryPageState extends State<CameragalleryPage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
+      body: Container(
+        child: ListView(
           children: <Widget>[
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                width: 300,
-                child: Text("Camera"),
-              ),
+            CustomBotton(
+              title: 'Camera',
               onPressed: () {
                 _recuperarImagem(true);
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                width: 300,
-                child: Text("Gallery"),
-              ),
+            CustomBotton(
+              title: 'Gallery',
               onPressed: () {
                 _recuperarImagem(false);
               },

@@ -39,6 +39,8 @@ dependencies:
   provider: any
 
   syncfusion_flutter_charts: any
+  syncfusion_flutter_calendar: ^17.4.39-beta
+  table_calendar: ^2.2.3
 
   audioplayers: any
   image_picker: any
@@ -99,6 +101,7 @@ flutter:
    - assets/images/pausar.png
    - assets/images/executar.png
    - assets/GoogleSantaTracker.flr
+   - assets/mortal.flr
    
 
   fonts:
