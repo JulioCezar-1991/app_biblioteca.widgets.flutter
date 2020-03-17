@@ -23,16 +23,23 @@ class _CardPageState extends State<CardPage> {
               children: <Widget>[
                 Card(
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Container(
-                        width: 80,
-                        height: 80,
-                        child: Center(
-                          child: Icon(Icons.security,
-                              color: Colors.redAccent, size: 45),
+                        width: 70.0,
+                        height: 70.0,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                            alignment: Alignment.topCenter,
+                            fit: BoxFit.cover,
+                            image:
+                                AssetImage('assets/images/subzeroperfil.jpg'),
+                          ),
                         ),
                       ),
                       Container(
+                        padding: EdgeInsets.only(left: 20),
                         width: 200,
                         height: 80,
                         child: Column(
@@ -59,10 +66,63 @@ class _CardPageState extends State<CardPage> {
                             ),
                           ],
                         ),
-                      )
+                      ),
                     ],
                   ),
-                )
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  elevation: 4,
+                  child: Stack(
+                    children: <Widget>[
+                      Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        clipBehavior: Clip.antiAlias,
+                        child: Image.asset(
+                          "assets/images/scorpion.jpg",
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Stack(
+                  children: <Widget>[
+                    Container(
+                      height: 124.0,
+                      margin: EdgeInsets.only(left: 46.0),
+                      decoration: BoxDecoration(
+                        color: Colors.black,
+                        shape: BoxShape.rectangle,
+                        borderRadius: BorderRadius.circular(8.0),
+                        boxShadow: <BoxShadow>[
+                          BoxShadow(
+                            color: Colors.black,
+                            blurRadius: 8.0,
+                            offset: Offset(0.0, 8.0),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.symmetric(vertical: 16.0),
+                      alignment: FractionalOffset.centerLeft,
+                      child: Image.asset('assets/images/MortalkombatLogo.png'),
+                      height: 96.0,
+                      width: 96.0,
+                    ),
+                  ],
+                ),
               ],
             ),
           ),

@@ -87,6 +87,9 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   assets:
+   - assets/MortalkombatLogo.png
+   - assets/scorpion.jpg
+   - assets/subzeroperfil.jpg
    - assets/icons/Clone-Old-icon.png
    - assets/icons/Darth-Vader-icon.png
    - assets/images/flutterSplash01.png
@@ -96,6 +99,7 @@ flutter:
    - assets/images/pausar.png
    - assets/images/executar.png
    - assets/GoogleSantaTracker.flr
+   
 
   fonts:
     - family: Roboto

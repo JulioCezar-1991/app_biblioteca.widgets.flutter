@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
+import '../../components/custom_botton_widget.dart';
+
 class TablePage extends StatefulWidget {
   final String title;
   const TablePage({Key key, this.title = "Table"}) : super(key: key);
@@ -17,23 +19,16 @@ class _TablePageState extends State<TablePage> {
         title: Text(widget.title),
       ),
       body: Container(
-        padding: EdgeInsets.only(left: 20, right: 20),
         child: ListView(
           children: <Widget>[
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Table"),
-              ),
+            CustomBotton(
+              title: 'Table',
               onPressed: () {
                 Modular.to.pushNamed('/home/table/table');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("DataTable"),
-              ),
+            CustomBotton(
+              title: 'DataTable',
               onPressed: () {
                 Modular.to.pushNamed('/home/table/datatable');
               },
