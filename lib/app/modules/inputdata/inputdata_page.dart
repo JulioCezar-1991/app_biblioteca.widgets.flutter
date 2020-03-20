@@ -4,7 +4,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 class InputdataPage extends StatefulWidget {
   final String title;
-  const InputdataPage({Key key, this.title = "Inputdate"}) : super(key: key);
+  const InputdataPage({Key key, this.title = "InputDate"}) : super(key: key);
 
   @override
   _InputdataPageState createState() => _InputdataPageState();
@@ -18,7 +18,6 @@ class _InputdataPageState extends State<InputdataPage> {
         title: Text(widget.title),
       ),
       body: Container(
-        padding: EdgeInsets.only(left: 20, right: 20),
         child: ListView(
           children: <Widget>[
             CustomBotton(
@@ -32,13 +31,6 @@ class _InputdataPageState extends State<InputdataPage> {
               onPressed: () {
                 Modular.to.pushNamed('/home/inputdata/databetwwen');
               },
-            ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("DataBetween"),
-              ),
-              onPressed: () {},
             ),
             CustomBotton(
               title: 'RadioButton',

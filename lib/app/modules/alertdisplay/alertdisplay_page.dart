@@ -1,6 +1,5 @@
 import 'package:app_flutter_biblioteca/app/components/custom_botton_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 
 class AlertDisplayPage extends StatefulWidget {
   final String title;
@@ -12,9 +11,11 @@ class AlertDisplayPage extends StatefulWidget {
 }
 
 class _AlertDisplayPageState extends State<AlertDisplayPage> {
+  GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       appBar: AppBar(
         title: Text(widget.title),
       ),
@@ -24,25 +25,74 @@ class _AlertDisplayPageState extends State<AlertDisplayPage> {
             CustomBotton(
               title: 'ShowDialog',
               onPressed: () {
-                Modular.to.pushNamed('/home/alertdisplay/alert');
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      title: Text("Conta Criada"),
+                      content: Text("Usuario Criado Com Sucesso"),
+                      actions: <Widget>[
+                        FlatButton(
+                          child: Text("Ok"),
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                        ),
+                      ],
+                    );
+                  },
+                );
               },
             ),
             CustomBotton(
               title: 'GeneralDialog',
               onPressed: () {
-                Modular.to.pushNamed('/home/alertdisplay/general');
+                showGeneralDialog(
+                  context: context,
+                  barrierDismissible: true,
+                  barrierLabel: MaterialLocalizations.of(context)
+                      .modalBarrierDismissLabel,
+                  barrierColor: Colors.black45,
+                  transitionDuration: const Duration(milliseconds: 600),
+                  pageBuilder: (BuildContext buildContext, Animation animation,
+                      Animation secondaryAnimation) {
+                    return Center(
+                      child: Container(
+                        width: MediaQuery.of(context).size.width - 80,
+                        height: MediaQuery.of(context).size.height - 80,
+                        padding: EdgeInsets.all(20),
+                        color: Colors.white,
+                        child: Column(
+                          children: [],
+                        ),
+                      ),
+                    );
+                  },
+                );
               },
             ),
             CustomBotton(
               title: 'ShowAboutDialog',
               onPressed: () {
-                Modular.to.pushNamed('/home/alertdisplay/about');
+                showAboutDialog(
+                  context: context,
+                  applicationIcon: FlutterLogo(),
+                  applicationName: "Flutter Playground",
+                  applicationVersion: "1.0.0",
+                  applicationLegalese: "Hello Word",
+                );
               },
             ),
             CustomBotton(
               title: 'SnackBar',
               onPressed: () {
-                Modular.to.pushNamed('/home/buttons/badges');
+                final snackbar = SnackBar(
+                  backgroundColor: Colors.blue,
+                  behavior: SnackBarBehavior.floating,
+                  content: Text("Conta Criada"),
+                  duration: Duration(seconds: 5),
+                );
+                _scaffoldKey.currentState.showSnackBar(snackbar);
               },
             ),
           ],
