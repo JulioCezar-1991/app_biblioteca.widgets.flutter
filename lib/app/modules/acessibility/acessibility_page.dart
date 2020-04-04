@@ -26,7 +26,7 @@ class _AcessibilityPageState extends State<AcessibilityPage> {
               onPressed: () {
                 Modular.to.pushNamed('/home/acessibility/tooltip');
               },
-            )
+            ),
           ],
         ),
       ),

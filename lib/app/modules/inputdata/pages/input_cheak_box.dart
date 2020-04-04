@@ -13,17 +13,16 @@ class _InputCheakBoxState extends State<InputCheakBox> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       appBar: AppBar(
         title: Text("CkeakBox"),
       ),
       body: Container(
-    
         padding: EdgeInsets.all(10),
         child: Column(
           children: <Widget>[
             Text("Comida Brasileira"),
             Checkbox(
+                activeColor: Theme.of(context).primaryColor,
                 value: _estaSelecionado1,
                 onChanged: (bool valor) {
                   setState(() {
@@ -31,12 +30,11 @@ class _InputCheakBoxState extends State<InputCheakBox> {
                   });
                 }),
             CheckboxListTile(
-              
               title: Text("Comida Mexicana"),
               value: _estaSelecionadoBr,
               subtitle: Text("A Melhor Comida do Mundo!"),
               selected: _estaSelecionadoBr,
-              activeColor: Colors.blueAccent,
+              activeColor: Theme.of(context).primaryColor,
               secondary: Icon(Icons.fastfood),
               onChanged: (bool valor) {
                 setState(() {
@@ -49,7 +47,7 @@ class _InputCheakBoxState extends State<InputCheakBox> {
               value: _estaSelecionadoMe,
               subtitle: Text("A Melhor Comida do Mundo!"),
               selected: _estaSelecionadoMe,
-              activeColor: Colors.blueAccent,
+              activeColor: Theme.of(context).primaryColor,
               secondary: Icon(Icons.fastfood),
               onChanged: (bool valor) {
                 setState(() {

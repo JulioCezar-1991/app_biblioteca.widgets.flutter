@@ -6,7 +6,6 @@ class InputRadioButton extends StatefulWidget {
 }
 
 class _InputRadioButtonState extends State<InputRadioButton> {
-  
   String _escolhaSexo;
   String _escolhaCidade;
 
@@ -17,6 +16,7 @@ class _InputRadioButtonState extends State<InputRadioButton> {
         title: Text("InputRadioButton"),
       ),
       body: Container(
+        padding: EdgeInsets.only(top: 20),
         child: Column(
           children: <Widget>[
             Text(
@@ -27,6 +27,7 @@ class _InputRadioButtonState extends State<InputRadioButton> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Radio(
+                  activeColor: Theme.of(context).primaryColor,
                   value: "M",
                   groupValue: _escolhaSexo,
                   onChanged: (String escolha) {
@@ -39,6 +40,7 @@ class _InputRadioButtonState extends State<InputRadioButton> {
                 ),
                 Text("Masculino"),
                 Radio(
+                  activeColor: Theme.of(context).primaryColor,
                   value: "F",
                   groupValue: this._escolhaSexo,
                   onChanged: (String escolha) {
@@ -59,6 +61,7 @@ class _InputRadioButtonState extends State<InputRadioButton> {
             Column(
               children: <Widget>[
                 RadioListTile(
+                  activeColor: Theme.of(context).primaryColor,
                   title: Text("Goiânia"),
                   value: "Goiânia",
                   groupValue: _escolhaCidade,
@@ -69,6 +72,7 @@ class _InputRadioButtonState extends State<InputRadioButton> {
                   },
                 ),
                 RadioListTile(
+                  activeColor: Theme.of(context).primaryColor,
                   title: Text("Ap Goiânia"),
                   value: "Ap Goiânia",
                   groupValue: _escolhaCidade,
@@ -79,6 +83,7 @@ class _InputRadioButtonState extends State<InputRadioButton> {
                   },
                 ),
                 RadioListTile(
+                  activeColor: Theme.of(context).primaryColor,
                   title: Text("Trindade"),
                   value: "Trindade",
                   groupValue: _escolhaCidade,

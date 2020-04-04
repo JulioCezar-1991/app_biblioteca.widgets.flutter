@@ -37,9 +37,19 @@ class _ClockExampleState extends State<ClockExample> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            GestureDetector(
-              child: Text('Horario Agendamento: ${this.horaAgendamento}'),
-              onTap: () => _selectHour(context),
+            RaisedButton.icon(
+              elevation: 5,
+              color: Theme.of(context).primaryColor,
+              onPressed: () => _selectHour(context),
+              icon: Icon(
+                Icons.access_time,
+                color: Colors.white,
+                size: 25,
+              ),
+              label: Text(
+                this.horaAgendamento,
+                style: TextStyle(color: Colors.white, fontSize: 24),
+              ),
             ),
           ],
         ),

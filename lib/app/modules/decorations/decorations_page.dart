@@ -1,3 +1,4 @@
+import 'package:app_flutter_biblioteca/app/components/custom_botton_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -18,50 +19,34 @@ class _DecorationsPageState extends State<DecorationsPage> {
         title: Text(widget.title),
       ),
       body: Container(
-        padding: EdgeInsets.only(left: 20, right: 20),
         child: ListView(
           children: <Widget>[
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("BackdropFilter"),
-              ),
+            CustomBotton(
+              title: "BackdropFilter",
               onPressed: () {
                 Modular.to.pushNamed('/home/decorations/backdrop');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("ClipPath"),
-              ),
+            CustomBotton(
+              title: "ClipPath",
               onPressed: () {
                 Modular.to.pushNamed('/home/decorations/clippath');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Gradient"),
-              ),
+            CustomBotton(
+              title: "Gradient",
               onPressed: () {
                 Modular.to.pushNamed('/home/decorations/gradient');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Radius"),
-              ),
+            CustomBotton(
+              title: "Radius",
               onPressed: () {
                 Modular.to.pushNamed('/home/decorations/radius');
               },
             ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Shadow"),
-              ),
+            CustomBotton(
+              title: "Shadow",
               onPressed: () {
                 Modular.to.pushNamed('/home/decorations/shadow');
               },

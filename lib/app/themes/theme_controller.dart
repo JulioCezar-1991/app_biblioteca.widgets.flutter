@@ -9,56 +9,52 @@ part 'theme_controller.g.dart';
 
 class ThemeController = _ThemeControllerBase with _$ThemeController;
 
-abstract class _ThemeControllerBase with Store {
+abstract class _ThemeControllerBase extends ChangeNotifier with Store {
+  @observable
+  var theme = lightTheme();
+
   _ThemeControllerBase() {
     load();
   }
 
-  @observable
-  var _theme = lightTheme();
-
   @action
-  change(String color) {
+  change(String color) async {
+    var prefs = await SharedPreferences.getInstance();
     switch (color) {
       case 'light':
         {
-          this._theme = lightTheme();
-          Settings.theme = 'light';
+          theme = lightTheme();
+          Settings.theme = "light";
+          prefs.setString("theme", Settings.theme);
+          notifyListeners();
           break;
         }
 
       case 'dark':
         {
-          this._theme = darkTheme();
+          theme = darkTheme();
           Settings.theme = "dark";
+          prefs.setString("theme", Settings.theme);
+          notifyListeners();
           break;
         }
 
       default:
         {
-          this._theme = lightTheme();
+          this.theme = lightTheme();
           Settings.theme = "light";
+          notifyListeners();
           break;
         }
     }
   }
 
   @action
-  save(theme) async {
-    var prefs = await SharedPreferences.getInstance();
-    await prefs.setString('theme', theme);
-  }
-
-  @action
   Future load() async {
     var prefs = await SharedPreferences.getInstance();
     var theme = prefs.getString('theme');
+
     Settings.theme = theme.isEmpty ? 'light' : theme;
     change(Settings.theme);
-  }
-
-  @action
-  ThemeData getTheme() {
-    return _theme;
   }
 }

@@ -8,17 +8,7 @@ class CalendarExample extends StatefulWidget {
 class _CalendarExampleState extends State<CalendarExample> {
   static DateTime dataSelecionada = DateTime.now();
 
-  DateTime _dataCriacao = dataSelecionada;
-
   String dataAgendamento;
-
-  String _formatDataCriacaoPedido(DateTime data) {
-    String dateFormarted = data.toString();
-    List dateList = dateFormarted.split(".");
-    String dados = dateList[0];
-
-    return dados;
-  }
 
   Future<Null> _selectDate(BuildContext context) async {
     final DateTime picked = await showDatePicker(
@@ -27,6 +17,7 @@ class _CalendarExampleState extends State<CalendarExample> {
       initialDate: dataSelecionada,
       firstDate: DateTime(2018),
       lastDate: DateTime(2101),
+      initialDatePickerMode: DatePickerMode.day,
     );
 
     if (picked != null && picked != dataSelecionada)
@@ -37,17 +28,17 @@ class _CalendarExampleState extends State<CalendarExample> {
       );
   }
 
-  formatarDia() {
+  String formatarDia() {
     if (dataSelecionada.day <= 9) {
-      var dia = "0${dataSelecionada.day}";
+      String dia = "0${dataSelecionada.day}";
       return dia;
     } else
       return dataSelecionada.day.toString();
   }
 
-  formatarMes() {
+  String formatarMes() {
     if (dataSelecionada.month <= 9) {
-      var mes = "0${dataSelecionada.month}";
+      String mes = "0${dataSelecionada.month}";
       return mes;
     } else
       return dataSelecionada.month.toString();
@@ -70,13 +61,19 @@ class _CalendarExampleState extends State<CalendarExample> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Text('Criação: ${_formatDataCriacaoPedido(_dataCriacao)}'),
-            SizedBox(
-              height: 50,
-            ),
-            GestureDetector(
-              child: Text('Data Agendamento: ${this.dataAgendamento}'),
-              onTap: () => _selectDate(context),
+            RaisedButton.icon(
+              elevation: 5,
+              color: Theme.of(context).primaryColor,
+              onPressed: () => _selectDate(context),
+              icon: Icon(
+                Icons.calendar_today,
+                color: Colors.white,
+                size: 25,
+              ),
+              label: Text(
+                this.dataAgendamento,
+                style: TextStyle(color: Colors.white, fontSize: 24),
+              ),
             ),
           ],
         ),

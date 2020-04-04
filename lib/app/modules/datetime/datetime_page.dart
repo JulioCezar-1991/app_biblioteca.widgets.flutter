@@ -1,3 +1,4 @@
+import 'package:app_flutter_biblioteca/app/components/custom_botton_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -17,25 +18,18 @@ class _DatetimePageState extends State<DatetimePage> {
         title: Text(widget.title),
       ),
       body: Container(
-        padding: EdgeInsets.only(left: 20, right: 20),
         child: ListView(
           children: <Widget>[
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Calendar"),
-              ),
-              onPressed: () {
-                Modular.to.pushNamed('/home/datetime/calendar');
-              },
-            ),
-            RaisedButton(
-              child: Container(
-                alignment: Alignment.center,
-                child: Text("Clock"),
-              ),
+            CustomBotton(
+              title: "Clock",
               onPressed: () {
                 Modular.to.pushNamed('/home/datetime/clock');
+              },
+            ),
+            CustomBotton(
+              title: "Calendar",
+              onPressed: () {
+                Modular.to.pushNamed('/home/datetime/calendar');
               },
             ),
           ],
