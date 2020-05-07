@@ -1,5 +1,5 @@
 import 'package:app_flutter_biblioteca/app/modules/text/pages/text_rotated_box.dart';
-import 'package:app_flutter_biblioteca/app/modules/text/pages/text_span.dart';
+import 'package:app_flutter_biblioteca/app/modules/text/pages/text_rich.dart';
 import 'package:app_flutter_biblioteca/app/modules/text/pages/text_underline.dart';
 import 'package:app_flutter_biblioteca/app/modules/text/text_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -15,7 +15,7 @@ class TextModule extends ChildModule {
   List<Router> get routers => [
         Router('/', child: (_, args) => TextPage()),
         Router('/rotated', child: (_, args) => TextRotatedBox()),
-        Router('/span', child: (_, args) => TextSpanExample()),
+        Router('/span', child: (_, args) => TextRichExample()),
         Router('/underline', child: (_, args) => TextUnderline()),
       ];
 

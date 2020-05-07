@@ -1,8 +1,8 @@
 import 'package:app_flutter_biblioteca/app/modules/datetime/datetime_controller.dart';
-import 'package:app_flutter_biblioteca/app/modules/datetime/page/calendar.dart';
-import 'package:app_flutter_biblioteca/app/modules/datetime/page/clock.dart';
+import 'package:app_flutter_biblioteca/app/modules/datetime/page/time.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:app_flutter_biblioteca/app/modules/datetime/datetime_page.dart';
+import '../charts/page/calendar.dart';
 
 class DatetimeModule extends ChildModule {
   @override

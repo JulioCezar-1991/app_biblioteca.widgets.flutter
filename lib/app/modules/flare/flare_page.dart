@@ -19,13 +19,15 @@ class _FlarePageState extends State<FlarePage> {
       body: Container(
         child: Center(
           child: FlareActor(
-            "assets/GoogleSantaTracker.flr",
+            "assets/flare_loading.flr",
             alignment: Alignment.center,
             fit: BoxFit.contain,
-            animation: "Untitled",
+            animation: "Alarm",
           ),
         ),
       ),
     );
   }
 }
+
+/* https://rive.app/explore/popular/trending/all */

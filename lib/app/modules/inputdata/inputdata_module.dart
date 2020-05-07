@@ -5,6 +5,7 @@ import 'package:app_flutter_biblioteca/app/modules/inputdata/pages/input_radio_b
 import 'package:app_flutter_biblioteca/app/modules/inputdata/pages/input_slider.dart';
 import 'package:app_flutter_biblioteca/app/modules/inputdata/pages/input_switch.dart';
 import 'package:app_flutter_biblioteca/app/modules/inputdata/pages/input_textField.dart';
+import 'package:app_flutter_biblioteca/app/modules/inputdata/pages/input_dropdown.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:app_flutter_biblioteca/app/modules/inputdata/inputdata_page.dart';
 
@@ -22,7 +23,8 @@ class InputdataModule extends ChildModule {
         Router('/radiobutton', child: (_, args) => InputRadioButton()),
         Router('/slider', child: (_, args) => InputSlider()),
         Router('/switch', child: (_, args) => InputSwitch()),
-        Router('/textfield', child: (_, args) => InputTextField())
+        Router('/dropdown', child: (_, args) => InputDropdown()),
+        Router('/textfield', child: (_, args) => InputTextField()),
       ];
 
   static Inject get to => Inject<InputdataModule>.of();

@@ -22,6 +22,12 @@ class _BoxcontrollerPageState extends State<BoxcontrollerPage> {
         child: ListView(
           children: <Widget>[
             CustomBotton(
+              title: 'Expanded',
+              onPressed: () {
+                Modular.to.pushNamed('/home/boxcontroller/expanded');
+              },
+            ),
+            CustomBotton(
               title: 'Flow',
               onPressed: () {
                 Modular.to.pushNamed('/home/boxcontroller/flow');
@@ -37,6 +43,12 @@ class _BoxcontrollerPageState extends State<BoxcontrollerPage> {
               title: 'Wrap',
               onPressed: () {
                 Modular.to.pushNamed('/home/boxcontroller/wrap');
+              },
+            ),
+            CustomBotton(
+              title: 'Placeholder',
+              onPressed: () {
+                Modular.to.pushNamed('/home/boxcontroller/placeholder');
               },
             ),
           ],

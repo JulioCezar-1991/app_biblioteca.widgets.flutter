@@ -13,7 +13,7 @@ class SplashPage extends StatefulWidget {
 
 class _SplashPageState extends State<SplashPage> {
   startTime() async {
-    Future.delayed(Duration(seconds: 3)).then((v) {
+    Future.delayed(Duration(seconds: 5)).then((v) {
       Modular.to.pushReplacementNamed('/home');
     });
   }
@@ -40,15 +40,23 @@ class _SplashPageState extends State<SplashPage> {
             _orin == Orientation.portrait
                 ? Column(
                     children: <Widget>[
-                      Image.asset(
-                        'assets/images/flutterSplash01.png',
-                        width: _size.width / 1.8,
-                      ),
+                      FlutterLogo(
+                          style: FlutterLogoStyle.horizontal,
+                          size: _size.width / 1.5),
                       SizedBox(
                         height: _size.height / 4,
                       ),
+                      LinearProgressIndicator(
+                        backgroundColor:
+                            Theme.of(context).primaryColor.withOpacity(0.8),
+                      ),
+                      SizedBox(
+                        height: _size.height / 10,
+                      ),
                       CircularProgressIndicator(
                         strokeWidth: 5,
+                        backgroundColor:
+                            Theme.of(context).primaryColor.withOpacity(0.8),
                       ),
                     ],
                   )

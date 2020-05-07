@@ -1,4 +1,10 @@
+import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:intl/intl.dart';
+
+import '../datetime_controller.dart';
 
 class CalendarExample extends StatefulWidget {
   @override
@@ -7,6 +13,10 @@ class CalendarExample extends StatefulWidget {
 
 class _CalendarExampleState extends State<CalendarExample> {
   static DateTime dataSelecionada = DateTime.now();
+
+  final _dateTimeController = Modular.get<DatetimeController>();
+  final formKey = GlobalKey<FormState>();
+  final format = DateFormat("HH:mm");
 
   String dataAgendamento;
 
@@ -57,10 +67,41 @@ class _CalendarExampleState extends State<CalendarExample> {
       appBar: AppBar(
         title: Text("Calendar"),
       ),
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
+            Observer(
+              builder: (_) {
+                return DateTimeField(
+                  key: formKey,
+                  initialValue: DateTime.now(),
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    icon: Icon(Icons.calendar_today),
+                    labelText: "Data de anivesário",
+                    hintText: "Data de anivesário",
+                    labelStyle: TextStyle(color: Theme.of(context).accentColor),
+                  ),
+                  format: format,
+                  onShowPicker: (context, currentValue) async {
+                    final date = await showDatePicker(
+                        context: context,
+                        firstDate: DateTime(1900),
+                        initialDate: currentValue ?? DateTime.now(),
+                        lastDate: DateTime(2100));
+                    if (date != null) {
+                      _dateTimeController.date = date.toString();
+                    }
+                    return date;
+                  },
+                );
+              },
+            ),
+            SizedBox(
+              height: 20,
+            ),
             RaisedButton.icon(
               elevation: 5,
               color: Theme.of(context).primaryColor,

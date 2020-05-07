@@ -30,7 +30,7 @@ class WrapExample extends StatelessWidget {
         title: Text("Wrap"),
       ),
       body: Center(
-        // O Widget é utilizado para organizar container na tela.
+        // Utilizado para organizar os containers na tela.
         child: Wrap(
           children: <Widget>[
             for (int i = 0; i <= 5; i++)

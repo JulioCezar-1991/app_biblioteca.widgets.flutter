@@ -84,7 +84,7 @@ class _AlertDisplayPageState extends State<AlertDisplayPage> {
               },
             ),
             CustomBotton(
-              title: 'SnackBar',
+              title: 'SnackBarFloating',
               onPressed: () {
                 final snackbar = SnackBar(
                   backgroundColor: Colors.blue,
@@ -95,6 +95,18 @@ class _AlertDisplayPageState extends State<AlertDisplayPage> {
                 _scaffoldKey.currentState.showSnackBar(snackbar);
               },
             ),
+            CustomBotton(
+              title: 'SnackBarFixed',
+              onPressed: () {
+                final snackbar = SnackBar(
+                  backgroundColor: Colors.blue,
+                  behavior: SnackBarBehavior.fixed,
+                  content: Text("Conta Criada"),
+                  duration: Duration(seconds: 5),
+                );
+                _scaffoldKey.currentState.showSnackBar(snackbar);
+              },
+            )
           ],
         ),
       ),

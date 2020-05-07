@@ -9,33 +9,37 @@ part of 'inputdata_controller.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$InputdataController on _InputdataBase, Store {
-  final _$valueAtom = Atom(name: '_InputdataBase.value');
+  final _$nameAtom = Atom(name: '_InputdataBase.name');
 
   @override
-  int get value {
-    _$valueAtom.context.enforceReadPolicy(_$valueAtom);
-    _$valueAtom.reportObserved();
-    return super.value;
+  String get name {
+    _$nameAtom.context.enforceReadPolicy(_$nameAtom);
+    _$nameAtom.reportObserved();
+    return super.name;
   }
 
   @override
-  set value(int value) {
-    _$valueAtom.context.conditionallyRunInAction(() {
-      super.value = value;
-      _$valueAtom.reportChanged();
-    }, _$valueAtom, name: '${_$valueAtom.name}_set');
+  set name(String value) {
+    _$nameAtom.context.conditionallyRunInAction(() {
+      super.name = value;
+      _$nameAtom.reportChanged();
+    }, _$nameAtom, name: '${_$nameAtom.name}_set');
   }
 
-  final _$_InputdataBaseActionController =
-      ActionController(name: '_InputdataBase');
+  final _$adressAtom = Atom(name: '_InputdataBase.adress');
 
   @override
-  void increment() {
-    final _$actionInfo = _$_InputdataBaseActionController.startAction();
-    try {
-      return super.increment();
-    } finally {
-      _$_InputdataBaseActionController.endAction(_$actionInfo);
-    }
+  String get adress {
+    _$adressAtom.context.enforceReadPolicy(_$adressAtom);
+    _$adressAtom.reportObserved();
+    return super.adress;
+  }
+
+  @override
+  set adress(String value) {
+    _$adressAtom.context.conditionallyRunInAction(() {
+      super.adress = value;
+      _$adressAtom.reportChanged();
+    }, _$adressAtom, name: '${_$adressAtom.name}_set');
   }
 }

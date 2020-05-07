@@ -51,6 +51,12 @@ class _InputdataPageState extends State<InputdataPage> {
               },
             ),
             CustomBotton(
+              title: 'Dropdown',
+              onPressed: () {
+                Modular.to.pushNamed('/home/inputdata/dropdown');
+              },
+            ),
+            CustomBotton(
               title: 'TextField',
               onPressed: () {
                 Modular.to.pushNamed('/home/inputdata/textfield');

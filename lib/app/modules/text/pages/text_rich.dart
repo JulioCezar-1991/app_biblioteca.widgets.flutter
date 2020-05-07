@@ -5,13 +5,12 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-class TextSpanExample extends StatefulWidget {
-
+class TextRichExample extends StatefulWidget {
   @override
-  _TextSpanState createState() => _TextSpanState();
+  _TextRichExampleState createState() => _TextRichExampleState();
 }
 
-class _TextSpanState extends State<TextSpanExample> {
+class _TextRichExampleState extends State<TextRichExample> {
   final recognizer = TapGestureRecognizer()
     ..onTap = () {
       print("You have tapped Flutter");

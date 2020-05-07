@@ -5,11 +5,21 @@ part 'inputdata_controller.g.dart';
 class InputdataController = _InputdataBase with _$InputdataController;
 
 abstract class _InputdataBase with Store {
-  @observable
-  int value = 0;
+  List<String> list = [
+    'Selecione um dia da Semana',
+    'Segunda-Feira',
+    'Terça-Feira',
+    'Quarta-Feira',
+    'Quinta-feira',
+    'Sexta-Feira'
+  ];
 
-  @action
-  void increment() {
-    value++;
-  }
+  @observable
+  String name = '';
+
+  @observable
+  String adress = '';
+
+  @observable
+  String day = '';
 }

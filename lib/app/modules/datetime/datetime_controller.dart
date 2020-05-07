@@ -6,10 +6,8 @@ class DatetimeController = _DatetimeBase with _$DatetimeController;
 
 abstract class _DatetimeBase with Store {
   @observable
-  int value = 0;
+  String time = '';
 
-  @action
-  void increment() {
-    value++;
-  }
+  @observable
+  String date = '';
 }

@@ -4,7 +4,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 class DatetimePage extends StatefulWidget {
   final String title;
-  const DatetimePage({Key key, this.title = "Datetime"}) : super(key: key);
+  const DatetimePage({Key key, this.title = "DateTime"}) : super(key: key);
 
   @override
   _DatetimePageState createState() => _DatetimePageState();
@@ -21,7 +21,7 @@ class _DatetimePageState extends State<DatetimePage> {
         child: ListView(
           children: <Widget>[
             CustomBotton(
-              title: "Clock",
+              title: "Time",
               onPressed: () {
                 Modular.to.pushNamed('/home/datetime/clock');
               },
