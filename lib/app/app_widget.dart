@@ -1,4 +1,4 @@
-import 'package:app_flutter_biblioteca/app/themes/theme_controller.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/themes/theme_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -11,21 +11,20 @@ class AppWidget extends StatelessWidget {
     final ThemeController themeController =
         Provider.of<ThemeController>(context);
     return Observer(
-        name: 'theme_store_observer',
-        builder: (BuildContext context) => MaterialApp(
-              navigatorKey: Modular.navigatorKey,
-              title: 'Flutter Widgets',
-              debugShowCheckedModeBanner: false,
-              theme: themeController.theme,
-              localizationsDelegates: [
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate
-              ],
-              supportedLocales: [
-                Locale("pt"),
-              ],
-              initialRoute: '/',
-              onGenerateRoute: Modular.generateRoute,
-            ));
+      name: 'theme_store_observer',
+      builder: (BuildContext context) => MaterialApp(
+        title: 'Flutter Widgets',
+        debugShowCheckedModeBanner: false,
+        theme: themeController.theme,
+        localizationsDelegates: [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate
+        ],
+        supportedLocales: [
+          Locale("pt"),
+        ],
+        initialRoute: '/',
+      ).modular(),
+    );
   }
 }

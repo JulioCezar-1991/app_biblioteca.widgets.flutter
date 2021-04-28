@@ -1,9 +1,9 @@
-import 'package:app_flutter_biblioteca/app/modules/text/pages/text_rotated_box.dart';
-import 'package:app_flutter_biblioteca/app/modules/text/pages/text_rich.dart';
-import 'package:app_flutter_biblioteca/app/modules/text/pages/text_underline.dart';
-import 'package:app_flutter_biblioteca/app/modules/text/text_controller.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/text/pages/text_rotated_box.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/text/pages/text_rich.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/text/pages/text_underline.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/text/text_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:app_flutter_biblioteca/app/modules/text/text_page.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/text/text_page.dart';
 
 class TextModule extends ChildModule {
   @override

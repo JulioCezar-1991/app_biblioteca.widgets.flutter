@@ -1,6 +1,6 @@
-import 'package:app_flutter_biblioteca/app/themes/dark_theme.dart';
-import 'package:app_flutter_biblioteca/app/themes/light_theme.dart';
-import 'package:app_flutter_biblioteca/app/themes/setting_theme.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/themes/dark_theme.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/themes/light_theme.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/themes/setting_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 import 'package:shared_preferences/shared_preferences.dart';

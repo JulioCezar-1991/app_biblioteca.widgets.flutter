@@ -1,8 +1,8 @@
-import 'package:app_flutter_biblioteca/app/modules/table/pages/data_table.dart';
-import 'package:app_flutter_biblioteca/app/modules/table/pages/table.dart';
-import 'package:app_flutter_biblioteca/app/modules/table/table_controller.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/table/pages/data_table.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/table/pages/table.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/table/table_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:app_flutter_biblioteca/app/modules/table/table_page.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/table/table_page.dart';
 
 class TableModule extends ChildModule {
   @override

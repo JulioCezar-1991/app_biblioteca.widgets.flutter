@@ -1,5 +1,5 @@
-import 'package:app_flutter_biblioteca/app/components/custom_botton_widget.dart';
-import 'package:app_flutter_biblioteca/app/themes/theme_controller.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/components/custom_botton_widget.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/themes/theme_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:provider/provider.dart';

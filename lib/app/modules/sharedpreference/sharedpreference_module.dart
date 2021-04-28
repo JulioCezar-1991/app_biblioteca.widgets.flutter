@@ -1,17 +1,15 @@
-import 'package:app_flutter_biblioteca/app/modules/sharedpreference/sharedpreference_controller.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/sharedpreference/sharedpreference_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:app_flutter_biblioteca/app/modules/sharedpreference/sharedpreference_page.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/sharedpreference/sharedpreference_page.dart';
 
-class SharedpreferenceModule extends ChildModule {
+class SharedpreferenceModule extends Module {
   @override
   List<Bind> get binds => [
         Bind((i) => SharedpreferenceController()),
       ];
 
   @override
-  List<Router> get routers => [
-        Router('/', child: (_, args) => SharedpreferencePage()),
-      ];
-
-  static Inject get to => Inject<SharedpreferenceModule>.of();
+  final List<ModularRoute> routes = [
+    ChildRoute('/', child: (_, args) => SharedpreferencePage()),
+  ];
 }

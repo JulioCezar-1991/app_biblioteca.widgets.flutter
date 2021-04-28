@@ -1,7 +1,7 @@
-import 'package:app_flutter_biblioteca/app/modules/acessibility/acessibility_controller.dart';
-import 'package:app_flutter_biblioteca/app/modules/acessibility/pages/acessibility_tooltip.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/acessibility/acessibility_controller.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/acessibility/pages/acessibility_tooltip.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:app_flutter_biblioteca/app/modules/acessibility/acessibility_page.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/acessibility/acessibility_page.dart';
 
 class AcessibilityModule extends ChildModule {
   @override

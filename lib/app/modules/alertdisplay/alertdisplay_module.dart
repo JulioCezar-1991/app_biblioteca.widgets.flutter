@@ -1,5 +1,5 @@
-import 'package:app_flutter_biblioteca/app/modules/alertdisplay/alertdisplay_controller.dart';
-import 'package:app_flutter_biblioteca/app/modules/alertdisplay/alertdisplay_page.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/alertdisplay/alertdisplay_controller.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/alertdisplay/alertdisplay_page.dart';
 
 import 'package:flutter_modular/flutter_modular.dart';
 

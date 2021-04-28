@@ -1,4 +1,4 @@
-import 'package:app_flutter_biblioteca/app/modules/animated/pages/animated_button.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/animated/pages/animated_button.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'animated_controller.dart';

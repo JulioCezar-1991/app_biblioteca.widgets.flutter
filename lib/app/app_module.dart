@@ -1,12 +1,12 @@
-import 'package:app_flutter_biblioteca/app/app_controller.dart';
-import 'package:app_flutter_biblioteca/app/modules/splash/splash_module.dart';
-import 'package:app_flutter_biblioteca/app/themes/theme_controller.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/app_controller.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/home/home_page.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/splash/splash_page.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/themes/theme_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
-import 'package:app_flutter_biblioteca/app/app_widget.dart';
-import 'modules/home/home_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/app_widget.dart';
 
-class AppModule extends MainModule {
+class AppModule extends Module {
   @override
   List<Bind> get binds => [
         Bind((i) => AppController()),
@@ -14,13 +14,10 @@ class AppModule extends MainModule {
       ];
 
   @override
-  List<Router> get routers => [
-        Router('/', module: SplashModule()),
-        Router('/home', module: HomeModule()),
-      ];
+  final List<ModularRoute> routes = [
+    ChildRoute('/', child: (_, args) => SplashPage()),
+    ChildRoute('/home', child: (_, args) => HomePage()),
+  ];
 
-  @override
   Widget get bootstrap => AppWidget();
-
-  static Inject get to => Inject<AppModule>.of();
 }

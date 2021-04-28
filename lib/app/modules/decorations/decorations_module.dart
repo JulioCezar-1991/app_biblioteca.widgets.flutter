@@ -1,11 +1,11 @@
-import 'package:app_flutter_biblioteca/app/modules/decorations/decorations_controller.dart';
-import 'package:app_flutter_biblioteca/app/modules/decorations/page/back_drop_filter.dart';
-import 'package:app_flutter_biblioteca/app/modules/decorations/page/clip_path.dart';
-import 'package:app_flutter_biblioteca/app/modules/decorations/page/gradient.dart';
-import 'package:app_flutter_biblioteca/app/modules/decorations/page/radius.dart';
-import 'package:app_flutter_biblioteca/app/modules/decorations/page/shadow.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/decorations/decorations_controller.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/decorations/page/back_drop_filter.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/decorations/page/clip_path.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/decorations/page/gradient.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/decorations/page/radius.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/decorations/page/shadow.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:app_flutter_biblioteca/app/modules/decorations/decorations_page.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/decorations/decorations_page.dart';
 
 class DecorationsModule extends ChildModule {
   @override

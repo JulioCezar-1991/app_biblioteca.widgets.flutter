@@ -1,59 +1,59 @@
-import 'package:app_flutter_biblioteca/app/modules/acessibility/acessibility_module.dart';
-import 'package:app_flutter_biblioteca/app/modules/alertdisplay/alertdisplay_module.dart';
-import 'package:app_flutter_biblioteca/app/modules/animated/animated_module.dart';
-import 'package:app_flutter_biblioteca/app/modules/audioplay/audioplay_module.dart';
-import 'package:app_flutter_biblioteca/app/modules/boxcontroller/boxcontroller_module.dart';
-import 'package:app_flutter_biblioteca/app/modules/buttons/button_module.dart';
-import 'package:app_flutter_biblioteca/app/modules/cameragallery/cameragallery_module.dart';
-import 'package:app_flutter_biblioteca/app/modules/card/card_module.dart';
-import 'package:app_flutter_biblioteca/app/modules/charts/charts_module.dart';
-import 'package:app_flutter_biblioteca/app/modules/datetime/datetime_module.dart';
-import 'package:app_flutter_biblioteca/app/modules/decorations/decorations_module.dart';
-import 'package:app_flutter_biblioteca/app/modules/flare/flare_module.dart';
-import 'package:app_flutter_biblioteca/app/modules/googlemap/googlemap_module.dart';
-import 'package:app_flutter_biblioteca/app/modules/home/home_controller.dart';
-import 'package:app_flutter_biblioteca/app/modules/home/home_page.dart';
-import 'package:app_flutter_biblioteca/app/modules/inputdata/inputdata_module.dart';
-import 'package:app_flutter_biblioteca/app/modules/navigations/navigation_module.dart';
-import 'package:app_flutter_biblioteca/app/modules/reordenable/reordenable_module.dart';
-import 'package:app_flutter_biblioteca/app/modules/sharedpreference/sharedpreference_module.dart';
-import 'package:app_flutter_biblioteca/app/modules/sqflite/sqflite_module.dart';
-import 'package:app_flutter_biblioteca/app/modules/table/table_module.dart';
-import 'package:app_flutter_biblioteca/app/modules/text/text_module.dart';
-import 'package:app_flutter_biblioteca/app/modules/validator/validator_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/acessibility/acessibility_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/alertdisplay/alertdisplay_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/animated/animated_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/audioplay/audioplay_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/boxcontroller/boxcontroller_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/buttons/button_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/cameragallery/cameragallery_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/card/card_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/charts/charts_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/datetime/datetime_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/decorations/decorations_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/flare/flare_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/googlemap/googlemap_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/home/home_controller.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/home/home_page.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/inputdata/inputdata_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/navigations/navigation_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/reordenable/reordenable_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/sharedpreference/sharedpreference_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/sqflite/sqflite_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/table/table_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/text/text_module.dart';
+import 'package:biblioteca_framework_flutter_github_io/app/modules/validator/validator_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-class HomeModule extends ChildModule {
+class HomeModule extends Module {
   @override
   List<Bind> get binds => [
         Bind((i) => HomeController()),
       ];
 
   @override
-  List<Router> get routers => [
-        Router('/home', child: (_, args) => HomePage()),
-        Router('/acessibility', module: AcessibilityModule()),
-        Router('/alertdisplay', module: AlertDisplayModule()),
-        Router('/animated', module: AnimatedModule()),
-        Router('/audioplay', module: AudioPlayModule()),
-        Router('/boxcontroller', module: BoxcontrollerModule()),
-        Router('/buttons', module: ButtonModule()),
-        Router('/cameragallery', module: CameragalleryModule()),
-        Router('/card', module: CardModule()),
-        Router('/charts', module: ChartsModule()),
-        Router('/datetime', module: DatetimeModule()),
-        Router('/decorations', module: DecorationsModule()),
-        Router('/validator', module: ValidatorModule()),
-        Router('/flare', module: FlareModule()),
-        Router('/googlemap', module: GooglemapModule()),
-        Router('/inputdata', module: InputdataModule()),
-        Router('/navigation', module: NavigationModule()),
-        Router('/reorderable', module: ReordenableModule()),
-        Router('/sharedpreference', module: SharedpreferenceModule()),
-        Router('/sqflite', module: SqfliteModule()),
-        Router('/table', module: TableModule()),
-        Router('/text', module: TextModule()),
-      ];
+  final List<ModularRoute> routes = [
+    ChildRoute('/home', child: (_, args) => HomePage()),
+    ChildRoute('/acessibility', module: AcessibilityModule()),
+    ChildRoute('/alertdisplay', module: AlertDisplayModule()),
+    ChildRoute('/animated', module: AnimatedModule()),
+    ChildRoute('/audioplay', module: AudioPlayModule()),
+    ChildRoute('/boxcontroller', module: BoxcontrollerModule()),
+    ChildRoute('/buttons', module: ButtonModule()),
+    ChildRoute('/cameragallery', module: CameragalleryModule()),
+    ChildRoute('/card', module: CardModule()),
+    ChildRoute('/charts', module: ChartsModule()),
+    ChildRoute('/datetime', module: DatetimeModule()),
+    ChildRoute('/decorations', module: DecorationsModule()),
+    ChildRoute('/validator', module: ValidatorModule()),
+    ChildRoute('/flare', module: FlareModule()),
+    ChildRoute('/googlemap', module: GooglemapModule()),
+    ChildRoute('/inputdata', module: InputdataModule()),
+    ChildRoute('/navigation', module: NavigationModule()),
+    ChildRoute('/reorderable', module: ReordenableModule()),
+    ChildRoute('/sharedpreference', module: SharedpreferenceModule()),
+    ChildRoute('/sqflite', module: SqfliteModule()),
+    ChildRoute('/table', module: TableModule()),
+    ChildRoute('/text', module: TextModule()),
+  ];
 
   static Inject get to => Inject<HomeModule>.of();
 }
